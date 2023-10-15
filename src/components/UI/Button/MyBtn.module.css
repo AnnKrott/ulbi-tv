@@ -1,7 +1,8 @@
 .myBtn {
     padding: 5px 15px;
     color: teal;
-    font-size: 12px;
+    font-family: inherit;
+    font-size: 14px;
     background-color: rgba(0, 128, 128, 0.137);
     cursor: pointer;
     border: 1px solid teal;
@@ -10,6 +11,6 @@
 }
 
 .myBtn:hover {
-    transform: scale(1.04);
-    background-color: rgba(255, 68, 0, 0.253);
+    transform: scale(1.02);
+    background-color: rgba(255, 68, 0, 0.180);
 }

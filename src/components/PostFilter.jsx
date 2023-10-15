@@ -9,7 +9,9 @@ const PostFilter = ({ filter, setFilter }) => {
             <MyInput
                 value={filter.query}
                 onChange={e => setFilter({ ...filter, query: e.target.value })}
-                placeholder='Search' />
+                placeholder='Search'
+                style={{ width: '90vw' }}
+            />
 
             <MySelect
                 value={filter.sort}

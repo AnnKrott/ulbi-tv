@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MyInput from "./UI/Input/MyInput";
 import MyBtn from "./UI/Button/MyBtn";
+import './../styles/App.css'
 
 const PostForm = ({ create }) => {
 
@@ -22,7 +23,7 @@ const PostForm = ({ create }) => {
     }
 
     return (
-        <form>
+        <form className="form">
 
             <MyInput
                 type='text'

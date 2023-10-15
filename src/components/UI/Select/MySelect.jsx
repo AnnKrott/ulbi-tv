@@ -5,6 +5,7 @@ const MySelect = ({ defaultValue, options, value, onChange }) => {
         <select
             value={value}
             onChange={e => onChange(e.target.value)}
+            style={{ fontSize: '14px', fontFamily: 'inherit' }}
         >
             <option disabled value=''>{defaultValue}</option>
             {options.map(option => {
