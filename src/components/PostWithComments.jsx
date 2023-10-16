@@ -17,12 +17,11 @@ const PostWithComments = ({ post, comments, isLoading, isComLoading }) => {
                 </div >
             }
 
-            <hr className='divider' />
-
             {isComLoading
                 ? ''
                 :
                 <>
+                    <hr className='divider' />
                     <h2 className='post__title'>Comments</h2>
 
                     <div className='post__comments' >
