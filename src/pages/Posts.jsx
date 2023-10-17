@@ -44,7 +44,7 @@ function Posts() {
         setPage(page);
     }
 
-    useObserver(lastElement, isPostsLoading, () => setPage(page + 1), posts);
+    useObserver(lastElement, isPostsLoading, () => setPage(page + 1), posts, page < totalPages);
 
     console.log(lastElement.current);
 

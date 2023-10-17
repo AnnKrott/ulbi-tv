@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MyInput from "./UI/Input/MyInput";
 import MyBtn from "./UI/Button/MyBtn";
 import './../styles/App.css'
+import axios from "axios";
 
 const PostForm = ({ create }) => {
 
@@ -10,16 +11,22 @@ const PostForm = ({ create }) => {
         body: '',
     })
 
-    const addNewPost = (e) => {
+    const addNewPost = async (e) => {
         e.preventDefault();
+
+        const response = await axios.post('https://jsonplaceholder.typicode.com/posts', post);
+        console.log(response.data);
+
         const newPost = {
-            ...post, id: Date.now()
+            ...response.data,
         };
         create(newPost);
         setPost({
             title: '',
             body: '',
+            id: '',
         });
+
     }
 
     return (

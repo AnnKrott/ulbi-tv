@@ -1,13 +1,13 @@
 import { useEffect, useRef } from "react";
 
-export const useObserver = (ref, isLoading, callbackFunction, posts) => {
+export const useObserver = (ref, isLoading, callbackFunction, posts, canLoad) => {
     const observer = useRef();
     useEffect(() => {
         if (isLoading) return;
         if (observer.current) observer.current.disconnect();
 
         var callback = function (entries, observer) {
-            if (entries[0].isIntersecting) {
+            if (entries[0].isIntersecting && canLoad) {
                 callbackFunction();
             }
         }
